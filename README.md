@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+##### DFY_INDIA_REACT_TASK APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## task - To fetch the data from, API - "https://randomuser.me/api/"  and display the data on Home page, also sisplay the telephone and username variable as same on bot home and details page.
 
-## Available Scripts
+At first, download the repo, and then in your local enviroment, got to this directory, then follow the below steps to run this app in your local machine.
 
-In the project directory, you can run:
+### Step 1: npm install
+it will install all dependencies mentioned in package.json file required to run the home page and get display fetched data from api
 
-### `npm start`
+### step 2: npm start
+It will satrt the app locally on url: localhost:3000 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Issues
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+During Interview, I dont able to figure out two tasks , below is the answer , how i get solved those 2 issue,
 
-### `npm test`
+### 1St Issue - Able to fetch data in console but not able to show on home page during interview, below is the solution
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I used 
 
-### `npm run build`
+# data.results.map
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+But i must had to use 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# data.results?.map
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+the above "?" , ensure that the object results entries fetched out successfuly,
 
-### `npm run eject`
+### 2nd issue - Able to print username and telephone on home page but not able to print the same on details page while navigating to details page from home page - below is the solution
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+At the time of interview i use 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# <p> username: {props.username}  </p>
+# <p> telephone: {props.telephone}</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+But I must had to use 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# <p> username: {props.username ? props.username : "John"}  </p>
+# <p> telephone: {props.telephone ? props.telephone : 123456}</p>
 
-## Learn More
+The above solution states that if username is not passed as props, then it will set default to John and same for telephone.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Screenshot of Home Page: - localhost:3000
 
-### Code Splitting
+![alt text](image.png)
+![alt text](image-1.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Screenshot of Details Page: - localhost:3000/student-details
