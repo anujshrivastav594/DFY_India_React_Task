@@ -1,8 +1,8 @@
 ##### DFY_INDIA_REACT_TASK APP
 
-## task - To fetch the data from, API - "https://randomuser.me/api/"  and display the data on Home page, also sisplay the telephone and username variable as same on bot home and details page.
+## Task - To fetch the data from, API - "https://randomuser.me/api/"  and display the data on Home page, also need to display the telephone and username variable as same on bot home and details page.
 
-At first, download the repo, and then in your local enviroment, got to this directory, then follow the below steps to run this app in your local machine.
+At first, download the repo, and then in your local enviroment, go to this directory, then follow the below steps to run this app in your local machine.
 
 ### Step 1: npm install
 it will install all dependencies mentioned in package.json file required to run the home page and get display fetched data from api
@@ -14,7 +14,7 @@ It will satrt the app locally on url: localhost:3000
 
 During Interview, I dont able to figure out two tasks , below is the answer , how i get solved those 2 issue,
 
-### 1St Issue - Able to fetch data in console but not able to show on home page during interview, below is the solution
+### 1st Issue - Able to fetch data in console but not able to show on home page during interview, below is the solution
 
 I used 
 
